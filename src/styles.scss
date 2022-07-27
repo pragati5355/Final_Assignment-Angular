@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./variable.scss";
+
+.navbar-top {
+    width: 100%;
+    background-color: $background;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 10px;
+}
+
+.col{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.day-time{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    color: $background !important;
+}

@@ -1,8 +1,7 @@
 @import '../../variable.scss';
 
 .navbar{
-
-    padding-left: 13%;
+    width: 100%;
     font-size: 11px;
     font-weight: 600;
     padding-top: 13px;
@@ -11,5 +10,10 @@
 .navbar-expand-lg .navbar-nav .nav-link {
 
     color: black !important;
+}
+
+.logo {
+    width: 33.47px;
+    height : 40.05px;
 }
 
