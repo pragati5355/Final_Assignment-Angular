@@ -97,8 +97,10 @@ body {
     background: #F5F7FF;
     border-radius: 6px;
     padding: 10px;
+    margin-left: 10px;
    
 }
+
 .buy-now-button{
     background: #0156FF;
     border-radius: 50px;
@@ -109,4 +111,8 @@ body {
     margin-left: 20px;
     padding-left: 35px;
     padding-right: 35px
+}
+
+.carousel-indicator{
+    display: inline-block;
 }
