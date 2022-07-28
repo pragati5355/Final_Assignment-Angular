@@ -1,13 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
 @import "./variable.scss";
 
+body {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    background: #fff;
+}
+
 .navbar-top {
     width: 100%;
     background-color: $background;
     justify-content: center;
-    align-items: center;
     display: flex;
     padding: 10px;
+}
+
+#navbarTogglerDemo02 { 
+    margin-left: 35px;
+}
+
+.nav-item {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: $primary;
+    padding: 30px 5px;
 }
 
 .col{
@@ -17,10 +35,78 @@
 }
 
 .day-time{
-    font-family: 'Poppins';
-    font-style: normal;
     font-weight: 600;
     font-size: 12px;
     line-height: 18px;
     color: $background !important;
+}
+
+.about-product-text{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    align-items: center;
+    color: #666666;
+    border-bottom: 2px solid #0156FF;
+}
+
+.apple-product-text{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #A2A6B0;
+}
+
+.product-name{
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 48px;
+    color: $primary;
+}
+
+.product-name-feature{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: $primary;
+}
+
+.product-description{
+    font-weight: 300;   
+    font-size: 14px;
+    line-height: 24px;
+    color: $primary;
+}
+
+.product-id{
+    font-size: 12px;
+    line-height: 18px;
+    color: $primary;
+}
+
+.product-price{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: $primary;
+}
+
+.quantity{
+    border: none;
+    box-shadow: none;
+    background: #F5F7FF;
+    border-radius: 6px;
+    padding: 10px;
+   
+}
+.buy-now-button{
+    background: #0156FF;
+    border-radius: 50px;
+    box-shadow: none;
+    border: none;
+    color: $background;
+    padding: 10px;
+    margin-left: 20px;
+    padding-left: 35px;
+    padding-right: 35px
 }

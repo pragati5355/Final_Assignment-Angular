@@ -2,10 +2,10 @@
 
 .navbar{
     width: 100%;
-    position: absolute;
     justify-content: center;
     align-items: center;
     display: flex;
+    padding: 5px;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
@@ -19,15 +19,6 @@
     display: flex;
 }
 
-.gadget-names{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 21px;
-    padding: 5px;
-    // padding-left: 60px
-}
 
 .navbar-toggler:focus,
 .navbar-toggler:active,
