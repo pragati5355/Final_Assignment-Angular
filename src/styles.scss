@@ -48,6 +48,7 @@ body {
     align-items: center;
     color: #666666;
     border-bottom: 2px solid #0156FF;
+    padding: 40px;
 }
 
 .apple-product-text{
@@ -115,4 +116,10 @@ body {
 
 .carousel-indicator{
     display: inline-block;
+}
+
+@media screen and (max-width: 576px) { 
+.product-row{
+    flex-direction: column-reverse;
+}
 }
