@@ -1,90 +1,76 @@
 <div class="container-fluid about-product">
-    <div class="container">
-        <div class="row product-row">
-            <div class="col-md-1">
+  <div class="container">
+    <div class="row product-row" *ngFor="let name of Getproductdetails">
+      <div class="col-md-1"></div>
+      <div class="col-md-5">
+        <div class="about-product-text">About Product</div>
+        <div class="apple-product-text">APPLE PRODUCTS</div>
+        <div class="product-name">
+          {{ name.productName }}
+        </div>
+        <div class="product-name-feature">It’s magic, remastered!</div>
+        <div class="product-description">
+          <div [innerHTML]="name.productDescription"></div>
+        </div>
+        <div class="product-id">SKU D5515AI</div>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-5">
+        <div class="col-md-4"></div>
 
+        <div class="d-flex align-items-center" style="padding: 40px">
+          <div>Price {{ name.productPrice | currency}}</div>
+          <input class="quantity" type="number" max="3" min="1" value="1" />
+          <button class="buy-now-button">Buy Now</button>
+        </div>
+
+        <div class="col-md-5">
+          <div
+            id="carouselInterval"
+            class="carousel slide"
+            data-bs-ride="carousel"
+            data-interval="3000"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="../../assets/_images/image1.png"
+                  class="d-block w-100"
+                  alt="Loading image"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="../../assets/_images/image 2.png"
+                  class="d-block w-100"
+                  alt="Loading images"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="../../assets/_images/image3.png"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="../../assets/_images/image4.png"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
             </div>
-            <div class="col-md-5">
-                    <div class="about-product-text">
-                        About Product
-                    </div>
-                    <div class="apple-product-text">
-                        APPLE PRODUCTS
-                    </div>
-                    <div class="product-name">
-                        New Apple AirPods (3rd Generation)
-                    </div>
-                    <div class="product-name-feature">
-                        It’s magic, remastered!
-                    </div>
-                    <div class="product-description">
-                        <ul>
-                            <li>Spatial audio with dynamic head tracking places sound all around you</li>
-                            <li>Adaptive EQ automatically tunes music to your ears</li>
-                            <li>All-new contoured design</li>
-                            <li>Force sensor lets you easily control your entertainment, answer or end calls, and more</li>
-                            <li>Sweat and water resistant</li>
-                            <li>Up to 6 hours of listening time with one charge</li>
-                            <li>Up to 30 hours of total listening time with the MagSafe Charging Case</li>
-                            <li>Quick access to Siri by saying “Hey Siri”</li>
-                            <li>Effortless setup, in-ear detection and automatic switching for a magical experience</li>
-                            <li>Easily share audio between two sets of AirPods on your iPhone, iPad, iPod touch or Apple TV</li>
-                        </ul>
-
-                    </div>
-                    <div class="product-id">
-                        SKU D5515AI
-                    </div>
-            </div>
-            <div class="col-md-6">
-
-                <div class="col-md-4">
-                    
-                </div>
-
-                <div class="d-flex align-items-center" style="padding: 40px;">
-                    <div>
-                        Price $299.00
-                    </div>
-                    <input class="quantity" type="number" max="3" min="1" value="1">
-                    <button class="buy-now-button">
-                        Buy Now
-                    </button>
-                </div>
-
-                
-                <div class="col-md-5">
-                    <div id="carouselInterval" class="carousel slide" data-bs-ride="carousel" data-interval="3000">
-                   
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="../../assets/_images/image1.png" class="d-block w-100" alt="Loading image">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="../../assets/_images/image 2.png" class="d-block w-100" alt="Loading images">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="../../assets/_images/image3.png" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="../../assets/_images/image4.png" class="d-block w-100" alt="...">
-                          </div>
-                        
-                        </div>
-                        <!-- <ul class="carousel-indicator" style="list-style-type:circle;">
+            <!-- <ul class="carousel-indicator" style="list-style-type:circle;">
                             <li date-target="carouselInterval" data-slide-to="0" class="active carousel-dots"></li>
                             <li date-target="carouselInterval" data-slide-to="1" class="carousel-dots"></li>
                             <li date-target="carouselInterval" data-slide-to="2" class="carousel-dots"></li>
                             <li date-target="carouselInterval" data-slide-to="3" class="carousel-dots"></li>
                         </ul>
                     -->
-                    </div>
-
-                </div>
-
-               
-            </div>
-
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
-
