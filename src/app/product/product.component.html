@@ -1,30 +1,43 @@
 <div class="container-fluid about-product">
   <div class="container">
     <div class="row product-row" *ngFor="let name of Getproductdetails">
-      <div class="col-md-1"></div>
+      <div class="col-md-1 "></div>
       <div class="col-md-5">
-        <div class="about-product-text">About Product</div>
-        <div class="apple-product-text">APPLE PRODUCTS</div>
+        <div class="about-product-text">
+           <span class="lineborder"> About Product</span>
+        </div>
+        <div class="apple-product-text">
+          <p>APPLE PRODUCTS</p>
+          
+        </div>
         <div class="product-name">
           {{ name.productName }}
         </div>
-        <div class="product-name-feature">It’s magic, remastered!</div>
+        <div class="product-name-feature">
+          <p> It’s magic, remastered!</p>
+        </div>
         <div class="product-description">
           <div [innerHTML]="name.productDescription"></div>
         </div>
-        <div class="product-id">SKU D5515AI</div>
+        <div class="product-id">
+          <p>SKU D5515AI</p>
+          
+        </div>
       </div>
       <div class="col-md-1"></div>
       <div class="col-md-5">
-        <div class="col-md-4"></div>
 
-        <div class="d-flex align-items-center" style="padding: 40px">
-          <div>Price {{ name.productPrice | currency}}</div>
-          <input class="quantity" type="number" max="3" min="1" value="1" />
-          <button class="buy-now-button">Buy Now</button>
+        <div class="product-feature d-flex align-items-end">
+          <div class="d-flex align-items-center" style="padding: 40px">
+            <div>Price {{ name.productPrice | currency}}</div>
+            <input #quantity class="quantity" id="quantity" type="number" max="3" min="1" value="1" />
+            <button class="buy-now-button" (click)="pay(quantity.value)">Buy Now</button>
+          </div>
         </div>
 
-        <div class="col-md-5">
+        
+
+        <div class="">
           <div
             id="carouselInterval"
             class="carousel slide"
