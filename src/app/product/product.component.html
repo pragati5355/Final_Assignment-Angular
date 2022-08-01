@@ -28,7 +28,7 @@
       <div class="col-md-5">
 
         <div class="product-feature d-flex align-items-end">
-          <div class="d-flex align-items-center" style="padding: 40px">
+          <div class="d-flex align-items-center" style="padding: 25px; margin-left: auto">
             <div>Price {{ name.productPrice | currency}}</div>
             <input #quantity class="quantity" id="quantity" type="number" max="3" min="1" value="1" />
             <button class="buy-now-button" (click)="pay(quantity.value)">Buy Now</button>

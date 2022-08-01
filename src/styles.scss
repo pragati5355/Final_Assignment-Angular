@@ -15,6 +15,25 @@ body {
     padding: 10px;
 }
 
+@media screen and (max-width: 576px) { 
+.navbar-top {
+    position: fixed;
+    z-index: 1;
+}
+}
+
+@media screen and (max-width: 576px) { 
+.navbar{
+    margin-top: 5rem;
+    position: fixed;
+    z-index: 1;
+}
+}
+    
+
+
+
+
 #navbarTogglerDemo02 { 
     margin-left: 35px;
 }
@@ -41,13 +60,17 @@ body {
     color: $background !important;
 }
 
+// .about-product{
+//     background: #F5F7FF;
+// }
+
 .about-product-text{
     font-weight: 600;
     font-size: 14px;
     line-height: 21px;
     align-items: center;
     color: #666666;
-    padding: 40px;
+    padding: 40px 40px 40px 0px
 }
 
 .lineborder{
@@ -59,6 +82,13 @@ body {
     font-size: 12px;
     line-height: 18px;
     color: #A2A6B0;
+    margin-top: 64px
+}
+
+@media screen and (max-width: 576px) { 
+.apple-product-text{
+    display: none;
+}
 }
 
 .product-name{
@@ -120,6 +150,12 @@ body {
 .carousel-indicator{
     display: inline-block;
 }
+
+.carousel-inner {
+    margin-top: 80px;
+    // margin-left: 30px
+}
+
 
 @media screen and (max-width: 576px) { 
 .product-row{
