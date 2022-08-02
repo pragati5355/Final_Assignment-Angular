@@ -37,13 +37,8 @@
           </div>
         </div>
       
-        <div class="">
-          <div
-            id="carouselInterval"
-            class="carousel slide"
-            data-bs-ride="carousel"
-            data-interval="3000"
-          >
+        <div class="carousel">
+          <div id="carouselInterval" class="carousel slide" data-bs-ride="carousel" data-interval="3000">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img
@@ -74,12 +69,18 @@
                 />
               </div>
             </div>
-            <ul class="carousel-indicator" style="list-style-type:circle;">
-                <li date-target="carouselInterval" data-slide-to="0" class="active carousel-dots"></li>
-                <li date-target="carouselInterval" data-slide-to="1" class="carousel-dots"></li>
-                <li date-target="carouselInterval" data-slide-to="2" class="carousel-dots"></li>
-                <li date-target="carouselInterval" data-slide-to="3" class="carousel-dots"></li>
-            </ul>
+            <div class="carousel-indicators" style="list-style-type:circle;">
+              <!-- <ul>
+                <li type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide1"></li>
+                <li type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></li>
+                <li type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></li>
+                <li type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></li>
+              </ul> -->
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
                    
           </div>
         </div>
@@ -92,10 +93,10 @@
     <div class="align-items-center d-flex stretch-action-item">
       <div class="aling-price-and-quantity">
         <div>Price {{ productDetails.productPrice | currency}}</div>
-        <input #quantity class="quantity" id="quantity" type="number" max="3" min="1" value="1" />
+        <input #productquantity class="quantity" id="quantity" type="number" max="3" min="1" value="1" />
       </div>
       <div class="pull-right">
-        <button class="buy-now-button" (click)="pay(quantity.value)">Buy Now</button>
+        <button class="buy-now-button" (click)="mobpay(productquantity.value)">Buy Now</button>
       </div>
     </div>
   </div>

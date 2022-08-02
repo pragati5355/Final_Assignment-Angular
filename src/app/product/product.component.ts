@@ -62,6 +62,31 @@ export class ProductComponent implements OnInit {
 
   }
 
+  async mobpay(selectedquantity : any ): Promise<void> {
+
+    const paymentMethod = {
+
+      //created a payment object
+      productname  : this.Getproductdetails[0].productName,
+      productId : this.Getproductdetails[0].id,
+      successUrl : 'http://localhost:4200/sucess',
+      cancelUrl : 'http://localhost:4200/cancel',
+      productquantity : selectedquantity,
+
+    };
+
+    const stripepayment = await this.stripePromise;
+
+    this.http.post("http://localhost:8080/api/v1/product/payments", paymentMethod)
+    .subscribe((data: any) => {
+      stripepayment.redirectToCheckout({
+        sessionId: data.id,
+      });
+    });
+
+  }
+
+
   
 
 }

@@ -150,32 +150,41 @@ body {
 }
 
 @media screen and (max-width: 767px) { 
-    .navbar-top {
-        position: fixed;
-        z-index: 1;
-    }
-    .navbar{
-        margin-top: 2rem;
-        position: fixed;
-        z-index: 1;
-        border-bottom: 2px solid #c9c4c4;;
-        background-color: #FFFFFF;
-    }
-    .apple-product-text{
-        display: none;
-    }
-    .product-feature{
-        display: none;
-    }
+.navbar-top {
+    position: fixed;
+    z-index: 1;
+}
+
+.navbar{
+    margin-top: 2rem;
+    position: fixed;
+    z-index: 1;
+    border-bottom: 2px solid #c9c4c4;;
+    background-color: #FFFFFF;
+}
+
+.apple-product-text{
+    display: none;
+}
+    
+.product-feature{
+    display: none;
+}
+
 .product-row{
     flex-direction: column-reverse;
 }
+
 .mob-product-feature {
     position: fixed;
     z-index: 9999;
     bottom: 0;
     background: #fff;
     width: 100%;
+}
+
+.carousel{
+    margin-top: 10rem;
 }
 }
 
