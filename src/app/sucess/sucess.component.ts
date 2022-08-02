@@ -19,7 +19,9 @@ export class SucessComponent implements OnInit {
       imageUrl: 'assets/_images/purchaseimg.png',
       imageWidth: 100,
       imageHeight: 100,
-      imageAlt: 'Custom image',
+      showCloseButton: true,
+      showCancelButton: false, 
+      showConfirmButton: false,
       showClass: {
         popup: 'animate__animated animate__fadeInDown'
       },
