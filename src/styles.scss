@@ -15,24 +15,9 @@ body {
     padding: 10px;
 }
 
-@media screen and (max-width: 576px) { 
-.navbar-top {
-    position: fixed;
-    z-index: 1;
+.navbar .logo {
+    padding: 10px 0;
 }
-}
-
-@media screen and (max-width: 576px) { 
-.navbar{
-    margin-top: 5rem;
-    position: fixed;
-    z-index: 1;
-}
-}
-    
-
-
-
 
 #navbarTogglerDemo02 { 
     margin-left: 35px;
@@ -60,10 +45,6 @@ body {
     color: $background !important;
 }
 
-// .about-product{
-//     background: #F5F7FF;
-// }
-
 .about-product-text{
     font-weight: 600;
     font-size: 14px;
@@ -77,18 +58,16 @@ body {
     border-bottom: 2px solid #0156FF;
 }
 
+.pad-100 {
+    padding-bottom: 100px;
+}
+
 .apple-product-text{
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
     color: #A2A6B0;
     margin-top: 64px
-}
-
-@media screen and (max-width: 576px) { 
-.apple-product-text{
-    display: none;
-}
 }
 
 .product-name{
@@ -148,17 +127,61 @@ body {
 }
 
 .carousel-indicator{
-    display: inline-block;
+    // width:  6px;
+    // height: 6px;
+    // border-radius:100%;
 }
 
 .carousel-inner {
     margin-top: 80px;
-    // margin-left: 30px
 }
 
 
-@media screen and (max-width: 576px) { 
+.stretch-action-item {
+    justify-content: space-between;
+    padding: 25px; 
+    margin-left: auto;
+}
+
+@media screen and (min-width: 768px){
+    .mob-product-feature {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 767px) { 
+    .navbar-top {
+        position: fixed;
+        z-index: 1;
+    }
+    .navbar{
+        margin-top: 2rem;
+        position: fixed;
+        z-index: 1;
+        border-bottom: 2px solid #c9c4c4;;
+        background-color: #FFFFFF;
+    }
+    .apple-product-text{
+        display: none;
+    }
+    .product-feature{
+        display: none;
+    }
 .product-row{
     flex-direction: column-reverse;
 }
+.mob-product-feature {
+    position: fixed;
+    z-index: 9999;
+    bottom: 0;
+    background: #fff;
+    width: 100%;
 }
+}
+
+.aling-price-and-quantity {
+    display: inline-flex;
+    align-items: center!important;
+}
+
+

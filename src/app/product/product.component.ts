@@ -13,6 +13,7 @@ import { Product } from '../_models/Product';
 export class ProductComponent implements OnInit {
 
   Getproductdetails : Product [] = [];
+  productDetails: any;
 
   stripePromise = loadStripe(environment.stripe);
 
@@ -27,6 +28,7 @@ export class ProductComponent implements OnInit {
       (res:any)=>{
         console.log(res);
         this.Getproductdetails = res;
+        this.productDetails = res[0];
         console.log(this.Getproductdetails);
 
       },

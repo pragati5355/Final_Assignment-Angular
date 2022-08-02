@@ -1,8 +1,8 @@
 <div class="container-fluid about-product">
   <div class="container">
-    <div class="row product-row" *ngFor="let name of Getproductdetails">
+    <div class="row product-row">
       <div class="col-md-1 "></div>
-      <div class="col-md-5">
+      <div class="col-md-5 pad-100">
         <div class="about-product-text">
            <span class="lineborder"> About Product</span>
         </div>
@@ -11,13 +11,13 @@
           
         </div>
         <div class="product-name">
-          {{ name.productName }}
+          {{ productDetails.productName }}
         </div>
         <div class="product-name-feature">
           <p> It’s magic, remastered!</p>
         </div>
         <div class="product-description">
-          <div [innerHTML]="name.productDescription"></div>
+          <div [innerHTML]="productDetails.productDescription"></div>
         </div>
         <div class="product-id">
           <p>SKU D5515AI</p>
@@ -27,16 +27,16 @@
       <div class="col-md-1"></div>
       <div class="col-md-5">
 
-        <div class="product-feature d-flex align-items-end">
-          <div class="d-flex align-items-center" style="padding: 25px; margin-left: auto">
-            <div>Price {{ name.productPrice | currency}}</div>
-            <input #quantity class="quantity" id="quantity" type="number" max="3" min="1" value="1" />
-            <button class="buy-now-button" (click)="pay(quantity.value)">Buy Now</button>
+        <div class="product-feature">
+          <div class="d-flex align-items-end">
+            <div class="d-flex align-items-center" style="padding: 25px; margin-left: auto">
+              <div>Price {{ productDetails.productPrice | currency}}</div>
+              <input #quantity class="quantity" id="quantity" type="number" max="3" min="1" value="1" />
+              <button class="buy-now-button" (click)="pay(quantity.value)">Buy Now</button>
+            </div>
           </div>
         </div>
-
-        
-
+      
         <div class="">
           <div
             id="carouselInterval"
@@ -74,15 +74,28 @@
                 />
               </div>
             </div>
-            <!-- <ul class="carousel-indicator" style="list-style-type:circle;">
-                            <li date-target="carouselInterval" data-slide-to="0" class="active carousel-dots"></li>
-                            <li date-target="carouselInterval" data-slide-to="1" class="carousel-dots"></li>
-                            <li date-target="carouselInterval" data-slide-to="2" class="carousel-dots"></li>
-                            <li date-target="carouselInterval" data-slide-to="3" class="carousel-dots"></li>
-                        </ul>
-                    -->
+            <ul class="carousel-indicator" style="list-style-type:circle;">
+                <li date-target="carouselInterval" data-slide-to="0" class="active carousel-dots"></li>
+                <li date-target="carouselInterval" data-slide-to="1" class="carousel-dots"></li>
+                <li date-target="carouselInterval" data-slide-to="2" class="carousel-dots"></li>
+                <li date-target="carouselInterval" data-slide-to="3" class="carousel-dots"></li>
+            </ul>
+                   
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mob-product-feature">
+  <div class="align-items-end">
+    <div class="align-items-center d-flex stretch-action-item">
+      <div class="aling-price-and-quantity">
+        <div>Price {{ productDetails.productPrice | currency}}</div>
+        <input #quantity class="quantity" id="quantity" type="number" max="3" min="1" value="1" />
+      </div>
+      <div class="pull-right">
+        <button class="buy-now-button" (click)="pay(quantity.value)">Buy Now</button>
       </div>
     </div>
   </div>
